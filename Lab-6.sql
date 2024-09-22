@@ -28,7 +28,8 @@ SELECT PI();
 --10. Find out round value of 157.732 for 2, 0 and -2 decimal points.
 SELECT ROUND(157.732 , 2) , ROUND(157.732 , 0) , ROUND(157.732 , -2);
 
---11. Find out exponential value of 2 and 3.SELECT EXP(2) , EXP(3);
+--11. Find out exponential value of 2 and 3.
+SELECT EXP(2) , EXP(3);
 
 --12. Find out logarithm having base e of 10 and 2.
 SELECT LOG(10) , LOG(2);
@@ -50,10 +51,11 @@ SELECT RAND()*10;
 
 
 ------------------------STRING FUNCTIONS------------------------
---1. Find the length of following. (I) NULL (II) ë hello í (III) Blank
+--1. Find the length of following. (I) NULL (II) ‚Äò hello ‚Äô (III) Blank
 SELECT LEN(NULL) , LEN(' HELLO ') , LEN('');
 
---2. Display your name in lower & upper case.SELECT LOWER('YASH') , UPPER('yash');
+--2. Display your name in lower & upper case.
+SELECT LOWER('YASH') , UPPER('yash');
 
 --3. Display first three characters of your name.
 SELECT LEFT('YASH',3);
@@ -61,27 +63,28 @@ SELECT LEFT('YASH',3);
 --4. Display 3rd to 10th character of your name.
 SELECT SUBSTRING('HELLO BY YASH PATEL' , 3 , 8); 
 
---5. Write a query to convert ëabc123efgí to ëabcXYZefgí & ëabcabcabcí to ëab5ab5ab5í using REPLACE.
+--5. Write a query to convert ‚Äòabc123efg‚Äô to ‚ÄòabcXYZefg‚Äô & ‚Äòabcabcabc‚Äô to ‚Äòab5ab5ab5‚Äô using REPLACE.
 SELECT REPLACE('abc123efg' , 123 , 'abcXYZefg') , REPLACE('ABCABCABC' , 'C' , 5);
 
---6.Write a query to display ASCII code for ëaí,íAí,ízí,íZí, 0, 9.
+--6.Write a query to display ASCII code for ‚Äòa‚Äô,‚ÄôA‚Äô,‚Äôz‚Äô,‚ÄôZ‚Äô, 0, 9.
 SELECT ASCII('a') , ASCII('A') , ASCII('z') , ASCII('Z') , ASCII(0) , ASCII(9);
 
 --7. Write a query to display character based on number 97, 65,122,90,48,57.
 SELECT CHAR(97) , CHAR(65) , CHAR(122) , CHAR(90) , CHAR(48) , CHAR(57);
 
---8. Write a query to remove spaces from left of a given string ëhello world
+--8. Write a query to remove spaces from left of a given string ‚Äòhello world
 SELECT LTRIM('    HELLO WORLD    ');
 
---9. Write a query to remove spaces from right of a given string ë hello world
+--9. Write a query to remove spaces from right of a given string ‚Äò hello world
 SELECT RTRIM('    HELLO WORLD    ');
 
---10. Write a query to display first 4 & Last 5 characters of ëSQL Serverí
+--10. Write a query to display first 4 & Last 5 characters of ‚ÄòSQL Server‚Äô
 SELECT LEFT('SQL SERVER' , 4) , RIGHT('SQL SERVER' , 5);
 
---11. Write a query to convert a string ë1234.56í to number (Use cast and convert function).SELECT CAST('1234.56' AS INT);
+--11. Write a query to convert a string ‚Äò1234.56‚Äô to number (Use cast and convert function).
+SELECT CAST('1234.56' AS INT);
 
---11. Write a query to convert a string ë1234.56í to number (Use cast and convert function).
+--11. Write a query to convert a string ‚Äò1234.56‚Äô to number (Use cast and convert function).
 SELECT CONVERT(DECIMAL(6 , 2) , '1234.56');
 
 --12. Write a query to convert a float 10.58 to integer (Use cast and convert function).
@@ -94,7 +97,7 @@ SELECT SPACE(10) + 'YASH';
 --14. Combine two strings using + sign as well as CONCAT ().
 SELECT 'YASH' + 'PATEL' , CONCAT('YASH' , 'PATEL');
 
---15. Find reverse of ìDarshanî
+--15. Find reverse of ‚ÄúDarshan‚Äù
 SELECT REVERSE('DARSHAN');
 
 --16. Repeat your name 3 times.
@@ -110,7 +113,8 @@ SELECT REPLICATE('YASH ',3);
 --1. Write a query to display the current date & time. Label the column Today_Date.
 SELECT GETDATE() AS CURRENTDATE;
 
---2. Write a query to find new date after 365 day with reference to today.SELECT DATEADD(D , 365 , GETDATE());
+--2. Write a query to find new date after 365 day with reference to today.
+SELECT DATEADD(D , 365 , GETDATE());
 
 --3. Display the current date in a format that appears as may 5 1994 12:00AM.
 SELECT FORMAT(GETDATE() , 'MMM dd yyyy HH:mm tt');
